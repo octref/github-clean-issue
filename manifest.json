@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub Clean Issue",
+  "version": "0.1.0",
+  "description": "Make GitHub issues easier to read",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": [
+        "vendor/sprint.min.js",
+        "main.js"
+      ]
+    }
+  ]
+}
