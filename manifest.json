@@ -1,14 +1,22 @@
 {
   "manifest_version": 2,
   "name": "GitHub Clean Issue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Make GitHub issues easier to read",
+  "author": "Pine Wu <octref@gmail.com>",
+  "icons": {
+    "128": "img/icon.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
       "js": [
-        "vendor/sprint.min.js",
+        "vendor/zepto.min.js",
+        "vendor/lodash.core.min.js",
         "main.js"
+      ],
+      "css": [
+        "clean.css"
       ]
     }
   ]

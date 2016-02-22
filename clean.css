@@ -1,0 +1,35 @@
+.cloned-comment-element {
+  width: 100%;
+
+  animation: clean-animation-fadeIn .4s forwards;
+}
+
+@keyframes clean-animation-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.discussion-timeline-clean::before {
+  background-color: #3a8fb7 !important;
+}
+
+.mentioned-nothere-popup:before {
+  content: attr(data-mentioned-username) " is not in this thread yet.";
+  position: absolute;
+  transform: translateY(-50px);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #767676;
+  background-color: #f7f7f7;
+  padding: 10px 15px;
+  z-index: 100;
+
+  animation: clean-animation-popup-shown 2s forwards;
+}
+
+@keyframes clean-animation-popup-shown {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
